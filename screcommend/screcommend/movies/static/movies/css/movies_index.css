@@ -1,0 +1,39 @@
+body{
+  background-color: #1B1B1B;
+  color:white;
+}
+
+#container{
+  position: absolute;
+  top:20vh;
+  left:3vw;
+  margin: 10px;
+}
+
+#movie-info-container{
+  width:100%;
+  height: auto;
+  margin-bottom: 12px;
+  margin-top: 5px;
+  position: relative;
+
+}
+#friend-title{
+  color:white;
+  text-align: center;
+  padding: 1vw;
+  width:25%;
+  font-size: 24px;
+  font-weight: 900;
+  
+}
+#movie{
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  width:20%;
+}
+#movie-poster{
+  width:100%;
+  height: auto;
+}

@@ -1,0 +1,39 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block head %}
+
+
+  <meta charset="UTF-8">
+
+  <script src="{% static "home/js/star.js" %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static "home/css/5star.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "movies/css/movies_index.css" %}">
+
+{% endblock %}
+{% block body %}
+  <section id="container">
+    {% for i in recommedation %}
+      <div id="movie-info-container">
+        <p id="friend-title">Other movies rated by {{i.name}}</p>
+        {% for j in i.rec %}
+          <div id="movie">
+          <p class="movie-title">{{j}}</p>
+          <img id="movie-poster" src="{% static "home/img/movie.jpg" %}">
+          <fieldset  class="rating">
+                  <input type="radio" id="field1_star5" name="rating1" value="5" /><label class = "full" for="field1_star5"></label>
+
+                  <input type="radio" id="field1_star4" name="rating1" value="4" /><label class = "full" for="field1_star4"></label>
+
+                  <input type="radio" id="field1_star3" name="rating1" value="3" /><label class = "full" for="field1_star3"></label>
+
+                  <input type="radio" id="field1_star2" name="rating1" value="2" /><label class = "full" for="field1_star2"></label>
+
+                  <input type="radio" id="field1_star1" name="rating1" value="1" /><label class = "full" for="field1_star1"></label>
+
+          </fieldset>
+        </div>
+          {% endfor%}
+      </div>
+    {% endfor%}
+  </section>
+{% endblock %}
