@@ -1,0 +1,47 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block head %}
+
+
+  <meta charset="UTF-8">
+
+  <script src="{% static "home/js/follow.js" %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static "home/css/home_index.css" %}">
+
+{% endblock %}
+{% block body %}
+  <div id="rec-friend-container">
+    <p class="heading"> Friends with simillar interest</p>
+    {% if suggested_friends %}
+      {% for i in suggested_friends %}
+        <div class="rec-friend box">
+          <img class="rec-friend-img img" src="{% static "home/img/pp.png" %}">
+          <p class="rec-friend-name name" value="{{i}}">{{i}}</p>
+          <p class="rec-follow follow" value="not_following">Follow</p>
+        </div>
+
+      {% endfor %}
+    {%else%}
+      <p class="heading"> No Friends to suggest,please rate some movies to make more awesome friends </p>
+    {% endif %}
+  </div>
+
+  <div id="fof-container">
+    <p class="heading"> Friends of friends </p>
+    {% if fof %}
+      {% for i in fof %}
+        <div class="fof box">
+          <img class="fof-img img" src="{% static "home/img/pp.png" %}">
+          <p class="fof-name name" value="{{i}}">{{i}}</p>
+          <p class="rec-follow follow" value="not_following">Follow</p>
+        </div>
+
+      {% endfor %}
+    {%else%}
+      <p class="heading"> No Friends to suggest,please rate some movies to make more awesome friends </p>
+    {% endif %}
+
+  </div>
+{% endblock %}

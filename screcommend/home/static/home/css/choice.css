@@ -1,0 +1,33 @@
+*{
+  margin:0px;
+  padding: 0px;
+}
+body{
+  background-color:#1B1B1B;
+  color:white;
+}
+#heading{
+  position: absolute;
+  left: 40%;
+  top:10vh;
+  color: white;
+  font-size: 2vw;
+}
+#movie-info-container{
+  width:35vw;
+  height: 50vh;
+  display:  inline;
+  float: left;
+
+  margin: 30px;
+  margin-top: 5px;
+  position: relative;
+  top:20vh;
+  left: 10vw;
+
+}
+#movie-poster{
+  position: relative;
+  width: 100%;
+  height: auto;
+}

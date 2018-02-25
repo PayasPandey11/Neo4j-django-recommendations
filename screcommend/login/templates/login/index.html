@@ -1,0 +1,42 @@
+{% load static %}
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static "login/css/login_index.css" %}">
+  <script src="{% static "login/js/login_index.js" %}"></script>
+</head>
+{% block content %}
+  <p id= "title" >Social Cops</p>
+  <p id= "gs" >Get Started</p>
+  <p id="tagline">Rate Movies Make Friends. <br> Make Friends Rate Movies.</p>
+  <div  id = "container">
+    <p id="login_heading" class="container-headings">Log-in</p><p id="signup_heading" class="container-headings">Sign-up</p>
+    <div class="active" id ="signin-div">
+
+      <form>
+        {% csrf_token %}
+        <input type="text" class="text-fields" placeholder="Email" name="email" id="signin-email">
+        <input type="password" class="text-fields" placeholder="Password" name="password" id="signin-password">
+
+      </form>
+      <div class="buttons" id="signin-button">Log in</div>
+    </div>
+
+
+    <div class="inactive" id ="signup-div">
+
+      <form>
+        {% csrf_token %}
+        <input type="text" class="text-fields" placeholder="Username" id ="signup-username" name="name">
+        <input type="text" class="text-fields" placeholder=" Email" id ="signup-email" name="email">
+        <input type="password" class="text-fields" placeholder=" Password" id ="signup-password" name="password">
+
+
+
+      </form>
+      <div class="buttons" id="signup-button">Signup</div>
+    </div>
+    <p id="error"></p>
+  </div>
+
+
+{% endblock %}

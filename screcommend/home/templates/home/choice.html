@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{% static "home/js/star.js" %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static "home/css/5star.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "home/css/choice.css" %}">
+
+</head>
+
+<body>
+
+  <p id="heading" >Please Rate 5 movies</p>
+  <section>
+    {% for i in movies %}
+      <div id="movie-info-container">
+        <p class="movie-title">{{i.m.title}}</p>
+        <img id="movie-poster" src="{% static "home/img/movie.jpg" %}">
+        <fieldset  class="rating">
+								<input type="radio" id="field1_star5" name="rating1" value="5" /><label class = "full" for="field1_star5"></label>
+
+								<input type="radio" id="field1_star4" name="rating1" value="4" /><label class = "full" for="field1_star4"></label>
+
+								<input type="radio" id="field1_star3" name="rating1" value="3" /><label class = "full" for="field1_star3"></label>
+
+								<input type="radio" id="field1_star2" name="rating1" value="2" /><label class = "full" for="field1_star2"></label>
+
+								<input type="radio" id="field1_star1" name="rating1" value="1" /><label class = "full" for="field1_star1"></label>
+
+				</fieldset>
+      </div>
+    {% endfor%}
+  </section>
+
+</body>
+
+</html>

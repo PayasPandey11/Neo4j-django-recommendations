@@ -1,0 +1,44 @@
+#nav{
+  background-color: white;
+  color:#1B1B1B;
+  display: inline;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  float: left;
+  font-size: 24px;
+  padding: 10px;
+
+}
+a{
+  text-decoration: none;
+  color:#1B1B1B;
+}
+#nav-title{
+  float: left;
+  display: inline;
+  position: relative;
+  margin: 10px;
+
+}
+#nav-friends{
+  float: left;
+  display: inline;
+  position: relative;
+  margin: 10px;
+}
+#nav-movies{
+  float: left;
+  display: inline;
+  position: relative;
+  margin: 10px;
+}
+#nav-logout{
+  text-decoration: none;
+  float: right;
+  display: inline;
+  position: relative;
+  right:2vw;
+}
